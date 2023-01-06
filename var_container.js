@@ -4,11 +4,11 @@ const blockData = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
 const blockDataHight = 3;
 const blockDataWidth = 3;
 
-function get_is_able_input() {
+function get_isAbleInput() {
     return isAbleInput;
 }
 
-function set_is_able_input(nowAbleInput) {
+function set_isAbleInput(nowAbleInput) {
     if(typeof nowAbleInput !== "boolean"){
         console.log("set_able_inputに代入された型が違います")
         return;
