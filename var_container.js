@@ -17,8 +17,27 @@ function set_is_able_input(nowAbleInput) {
     return;
 }
 
+function is_good_blockData(newBlockData){
+    let is_good_data = true
+    if(typeof newBlockData !== "object"){
+        console.log("is_good_blockDataに代入された型が違います")
+        is_good_data = false
+    }
+    if(newBlockData.length !== blockDataHight){
+        console.log("is_good_blockDataに代入された高さが違います")
+        is_good_data = false
+    }
+    for (let i = 0; i < newBlockData.length; i++) {
+        if(newBlockData[i].length !== blockDataWidth){
+            console.log("is_good_blockDataに代入された" + i + "番目の幅が違います")
+            is_good_data = false
+        } 
+    }
+    return is_good_data
+}
+
 function update_blockdata(newBlockData){
-    if(true /*is_good_blockData(newBlockData)*/){
+    if(is_good_blockData(newBlockData)){
         blockData.splice(0,blockDataHight)
         console.log("neBlockData = " + newBlockData)
         newBlockData.forEach((line) => {
