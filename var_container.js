@@ -36,6 +36,10 @@ function is_good_blockData(newBlockData){
     return is_good_data
 }
 
+function get_blockdata() {
+    return blockData;
+}
+
 function update_blockdata(newBlockData){
     if(is_good_blockData(newBlockData)){
         blockData.splice(0,blockDataHight)
