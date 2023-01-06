@@ -36,11 +36,11 @@ function is_good_blockData(newBlockData){
     return is_good_data
 }
 
-function get_blockdata() {
+function get_blockdData() {
     return blockData;
 }
 
-function update_blockdata(newBlockData){
+function update_blockData(newBlockData){
     if(is_good_blockData(newBlockData)){
         blockData.splice(0,blockDataHight)
         console.log("neBlockData = " + newBlockData)
