@@ -1,7 +1,7 @@
 let isAbleInput = true;
 let justUpdate = false;
 const blockData = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
-const blockDataHight = 3;
+const blockDataHeight = 3;
 const blockDataWidth = 3;
 
 function get_isAbleInput() {
@@ -23,7 +23,7 @@ function is_good_blockData(newBlockData){
         console.log("is_good_blockDataに代入された型が違います")
         is_good_data = false
     }
-    if(newBlockData.length !== blockDataHight){
+    if(newBlockData.length !== blockDataHeight){
         console.log("is_good_blockDataに代入された高さが違います")
         is_good_data = false
     }
@@ -42,7 +42,7 @@ function get_blockdData() {
 
 function update_blockData(newBlockData){
     if(is_good_blockData(newBlockData)){
-        blockData.splice(0,blockDataHight)
+        blockData.splice(0,blockDataHeight)
         console.log("neBlockData = " + newBlockData)
         newBlockData.forEach((line) => {
             console.log("line = " + line)
